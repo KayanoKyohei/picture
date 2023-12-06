@@ -19,6 +19,10 @@ ul, li {
   margin: 0;
 }
 
+h2{
+  color: blue;
+}
+
 strong {
   color: red;
 }
