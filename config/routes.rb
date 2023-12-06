@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post "user/:id/update" => "user#update"
+  get "user/:id/edit" => "user#edit"
   post "user/create" => "user#create"
   get "signup" => "user#new"
   get 'user/index' => "user#index"
