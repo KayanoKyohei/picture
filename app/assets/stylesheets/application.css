@@ -17,6 +17,7 @@ ul, li {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  float:left;
 }
 
 h2{
@@ -25,4 +26,22 @@ h2{
 
 strong {
   color: red;
+}
+
+/* ヘッダー ================================ */
+header {
+  background-color: #f7f2b4;
+  height: 90px;
+}
+
+header li{
+  list-style:none;
+  float:left;
+  padding:33px 20px;
+}
+
+.header-logo{
+  font-size:36px;
+  float:left;
+  padding:20px;
 }

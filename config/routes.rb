@@ -14,10 +14,10 @@ Rails.application.routes.draw do
   get "posts/new" => "posts#new"
   get "posts/:id" => "posts#show"
   
-  get 'home/top' => "home#top"
+  get '/' => "home#top"
   get "home/about" => "home#about"
   
-  get "/" => 'blogs#index'
+  get "blog" => 'blogs#index'
   resources :blogs
   
 end
