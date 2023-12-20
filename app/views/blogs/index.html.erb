@@ -2,11 +2,12 @@
 
 <h1>Blogs</h1>
 
+
 <div id="blogs">
   <% @blogs.each do |blog| %>
     <%= render blog %>
     <p>
-      <%= link_to "ブログの詳細", blog %>
+      <%= link_to "ブログの詳細", "blogs/show" %>
     </p>
   <% end %>
 </div>
