@@ -1,7 +1,7 @@
 <div id="<%= dom_id blog %>">
   <p>
     <strong>タイトル:</strong>
-    <%= blog.title %>
+      <%=link_to(blog.title,"/posts/#{blog.id}") %>
   </p>
 
   <p>

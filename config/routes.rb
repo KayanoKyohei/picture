@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   
   get "blog" => 'blogs#index'
   get "blogs/new" => "blogs#new"
+  get "blogs/show" => "blogs#show"
+  get "blogs/edit" => "blogs#edit"
   resources :blogs
   
 end
