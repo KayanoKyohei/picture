@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get "home/about" => "home#about"
   
   get "blog" => 'blogs#index'
+  get "blogs/new" => "blogs#new"
   resources :blogs
   
 end
