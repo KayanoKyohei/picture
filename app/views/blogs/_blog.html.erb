@@ -10,8 +10,18 @@
   </p>
   
   <p>
+<<<<<<< HEAD
     <strong>投稿写真:</strong>
     <%= image_tag blog.image %>
+=======
+    <strong>Image:</strong>
+    <% if blog.image.present? %>
+      <%= image_tag blog.image %>
+    <% else %>
+      <p>画像無し</p>
+    <% end %>
+    
+>>>>>>> S8
 
   </p>
 
