@@ -1,4 +1,5 @@
-<h3>blogの詳細</h3>
+<h3>ブログの詳細</h3>
+
 <p>タイトル：<%=@post.title%></p>
 <p>メモ：<%=@post.memo%></p>
 <p>作成日時：<%=@post.created_at %></p>
@@ -7,3 +8,6 @@
 <% else %>
     <p>画像無し</p>
 <% end %>
+  <p>
+    <%=link_to("ブログの編集","/blogs/#{@post.id}/edit") %>
+  </p>

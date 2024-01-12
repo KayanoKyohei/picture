@@ -1,9 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
 <%=  @blog %>
+<%=  @post%>
 
 <div>
-  <%= link_to "Edit this blog", "/blog" %> |
+  <%#=link_to(post.title,"/posts/#{post.id}") %>
+  <%#= link_to "Edit this blog", "/blog" %> 
   <%= link_to "Back to blogs", "/blog" %>
 
   <%= button_to "ブログの削除", @blog, method: :delete %>

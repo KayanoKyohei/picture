@@ -1,10 +1,13 @@
-<h1>Editing blog</h1>
+<h1>ブログの編集</h1>
+<p>概要欄の変更</p>
+<%= form_tag("/blogs/#{@post.id}/up_date") do %>
+<textarea name="memo"><%= @post.memo%></textarea>
+<input type="submit" value="保存">
+<%end%>
 
-<%= render "form", blog: @blog %>
 
-<br>
 
-<div>
-  <%= link_to "Show this blog", @blog %> |
-  <%= link_to "Back to blogs", blogs_path %>
-</div>
+<%#= render "form", blog: @blog %>
+
+  <%#= link_to "Show this blog", @blog %> 
+  <%#= link_to "Back to blogs", blogs_path %>

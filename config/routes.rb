@@ -20,7 +20,8 @@ Rails.application.routes.draw do
   get "blog" => 'blogs#index'
   get "blogs/new" => "blogs#new"
   get "blogs/show" => "blogs#show"
-  get "blogs/edit" => "blogs#edit"
+  get "blogs/:id/edit" => "blogs#edit"
+  post "blogs/:id/up_date" => "blogs#up_date"
   resources :blogs
   
 end
