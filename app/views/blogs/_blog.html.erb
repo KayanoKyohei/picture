@@ -10,17 +10,17 @@
   </p>
   
   <p>
-    <strong>投稿画像:</strong>
+    <strong>投稿写真:</strong>
     <% if blog.image.present? %>
       <%= image_tag blog.image %>
     <% else %>
-      <p>画像無し</p>
+      <p>写真無し</p>
     <% end %>
     
 
   </p>
   <p>
-    <%=link_to("ブログの詳細","/posts/#{blog.id}") %>
+    <%=link_to("写真の詳細","/posts/#{blog.id}") %>
 
   </p>
 

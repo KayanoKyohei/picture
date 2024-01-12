@@ -52,6 +52,7 @@ class BlogsController < ApplicationController
   
   def up_date
     @post=Blog.find_by(id: params[:id])
+    @post.title = params[:title]
     @post.memo = params[:memo]
     @post.save
     redirect_to("/blog")

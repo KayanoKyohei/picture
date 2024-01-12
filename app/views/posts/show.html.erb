@@ -1,4 +1,4 @@
-<h3>ブログの詳細</h3>
+<h3>写真の詳細</h3>
 
 <p>タイトル：<%=@post.title%></p>
 <p>メモ：<%=@post.memo%></p>
@@ -6,9 +6,9 @@
 <% if @post.image.present? %>
     <%= image_tag @post.image %>
 <% else %>
-    <p>画像無し</p>
+    <p>写真無し</p>
 <% end %>
   <p>
-    <%=link_to("ブログの編集","/blogs/#{@post.id}/edit") %>
-    <%=link_to("ブログの削除","/blogs/#{@post.id}/destroy") %>
+    <%=link_to("写真の編集","/blogs/#{@post.id}/edit") %>
+    <%=link_to("写真の削除","/blogs/#{@post.id}/destroy") %>
   </p>

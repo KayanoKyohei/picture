@@ -12,21 +12,21 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
+    <%= form.label :タイトル, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
   <div>
-    <%= form.label :memo, style: "display: block" %>
+    <%= form.label :概要欄, style: "display: block" %>
     <%= form.text_area :memo %>
   </div>
   
   <div class="field">
-    <%= form.label :image %>
+    <%= form.label :写真 %>
     <%= form.file_field :image %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <input type="submit" value="新規投稿">
   </div>
 <% end %>
