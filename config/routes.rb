@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get "blogs/new" => "blogs#new"
   get "blogs/show" => "blogs#show"
   get "blogs/:id/edit" => "blogs#edit"
+  get "blogs/:id/destroy" => "blogs#destroy"
   post "blogs/:id/up_date" => "blogs#up_date"
   resources :blogs
   
