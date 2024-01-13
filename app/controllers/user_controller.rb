@@ -75,4 +75,10 @@ class UserController < ApplicationController
     end
   end
   
+  def destroy
+    @user = Post.find_by(id: params[:id])
+    @user.destroy
+    redirect_to("/")
+  end
+  
 end

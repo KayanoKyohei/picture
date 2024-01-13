@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   
   def show
     @post = Blog.find_by(id:params[:id])
+    @user = @post.user
   end
   
   def new
