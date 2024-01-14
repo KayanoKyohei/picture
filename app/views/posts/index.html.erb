@@ -1,6 +1,9 @@
+<h2><%=link_to("タイトル検索はこちら","/blogs/search") %></h2>
+
 <h3>写真のタイトル一覧</h3>
 <% @posts.each do |post| %>
 <p>
 <%=link_to(post.title,"/posts/#{post.id}") %>
+
 </p>
 <%end%>

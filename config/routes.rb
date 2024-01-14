@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :blogs do
+  get :search, on: :collection
+end
+  
+  
   post "likes/:post_id/create" => "likes#create"
   post "likes/:post_id/destroy" => "likes#destroy"
   
