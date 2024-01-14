@@ -3,11 +3,20 @@
 <p>タイトル：<%=@post.title%></p>
 <p>概要欄：<%=@post.memo%></p>
 <p>作成日時：<%=@post.created_at %></p>
+
 <% if @post.image.present? %>
     <%= image_tag @post.image %>
 <% else %>
     <p>写真無し</p>
 <% end %>
+
+<% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
+<p><%= button_to("いいね！済み", "/likes/#{@post.id}/destroy", {method: "post"}) %></p>
+<% else %>
+<p><%= button_to("いいね！", "/likes/#{@post.id}/create", {method: "post"}) %></p>
+<% end %>
+<p>いいねされた数：<%= @likes_count %></p>
+      
 <% if @post.user_id == @current_user.id %>
   <p>
     <%=link_to("写真の編集","/blogs/#{@post.id}/edit") %>
