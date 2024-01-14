@@ -68,9 +68,17 @@ class BlogsController < ApplicationController
     end
   end
   
-    def search
+  def search
     if params[:title].present?
       @posts = Blog.where('title LIKE ?', "%#{params[:title]}%")
+    else
+      @posts = Blog.none
+    end
+  end
+  
+  def searchmemo
+    if params[:memo].present?
+      @posts = Blog.where('memo LIKE ?', "%#{params[:memo]}%")
     else
       @posts = Blog.none
     end

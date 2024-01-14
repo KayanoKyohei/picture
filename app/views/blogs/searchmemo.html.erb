@@ -1,0 +1,10 @@
+<h1>概要欄検索</h1>
+<%= form_with url: searchmemo_blogs_path, method: :get, local: true do |f| %>
+  <%= f.text_field :memo %>
+  <%= f.submit :検索 %>
+<% end %>
+
+<h3>概要欄</h3>
+<% @posts.each do |post| %>
+    <p></M><%=link_to(post.title,"/posts/#{post.id}") %></p>
+<% end %>
