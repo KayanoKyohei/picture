@@ -45,3 +45,18 @@ header li{
   float:left;
   padding:20px;
 }
+
+/* トップ ================================ */
+.container{
+  width:1170px;
+  padding:0 15px;
+  margin: 0 auto;
+}
+
+.top-wrapper{
+  padding-top:180px;
+  padding-bottom:180px;
+  background-image:url(https://www.pakutaso.com/shared/img/thumb/kumakichi0221026_TP_V.jpg);
+  color:white;
+  background-size:cover;
+}
