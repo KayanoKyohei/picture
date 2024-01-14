@@ -1,14 +1,17 @@
 <h3>写真の詳細</h3>
 <p>この写真の投稿者：<%= link_to(@user.name, "/user/#{@user.id}") %></p>
 <p>タイトル：<%=@post.title%></p>
-<p>メモ：<%=@post.memo%></p>
+<p>概要欄：<%=@post.memo%></p>
 <p>作成日時：<%=@post.created_at %></p>
 <% if @post.image.present? %>
     <%= image_tag @post.image %>
 <% else %>
     <p>写真無し</p>
 <% end %>
+<% if @post.user_id == @current_user.id %>
   <p>
     <%=link_to("写真の編集","/blogs/#{@post.id}/edit") %>
     <%=link_to("写真の削除","/blogs/#{@post.id}/destroy") %>
+<% end %>
   </p>
+  <p><%=link_to("投稿一覧へ戻る","/blog") %></p>
